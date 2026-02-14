@@ -63,7 +63,7 @@ export default function FeedbackPage(): JSX.Element {
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
               Raise <span className="font-mono">Feedback</span> for
               <span className="block text-transparent bg-clip-text bg-gradient-to-r  from-yellow-400 via-green-500 to-red-500">
-                Blogs , Other Projects and portfolio
+                Blogs
               </span>
             </h1>
             <p className="text-gray-400 text-lg lg:text-xl">
@@ -128,7 +128,7 @@ export default function FeedbackPage(): JSX.Element {
 
         {/* Right Side - Feedback Form */}
         <div className="flex items-center">
-          <Card className="w-full bg-[#141414] border-gray-800">
+          <Card className="w-full border-none bg-[#141414] border-gray-800">
             <CardHeader className="space-y-2">
               <CardTitle className="text-2xl font-bold text-white">
                 Share Your Feedback
