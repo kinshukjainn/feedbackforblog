@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        vt323: ["var(--font-vt323)", "monospace"],
+        ptSans: ["var(--font-pt-sans)", "sans-serif"],
       },
     },
   },

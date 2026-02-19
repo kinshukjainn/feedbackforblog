@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, FormEvent, JSX } from "react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -53,20 +52,17 @@ export default function FeedbackPage(): JSX.Element {
       setIsSubmitting(false);
     }
   };
-
   return (
-    <main className="min-h-screen bg-black flex items-center justify-center p-4 lg:p-8">
+    <main className="min-h-screen bg-[#313131] flex items-center justify-center p-4 lg:p-8">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left Side - Branding & Guidelines */}
         <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
               Raise <span className="font-mono">Feedback</span> for
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r  from-yellow-400 via-green-500 to-red-500">
-                Blogs
-              </span>
+              <span className="block text-green-500">Blogs</span>
             </h1>
-            <p className="text-gray-400 text-lg lg:text-xl">
+            <p className="text-[#e6e6e6] text-lg lg:text-xl">
               Your issues and feedback helps me to improve my website and
               blogs/products better
             </p>
@@ -74,16 +70,18 @@ export default function FeedbackPage(): JSX.Element {
 
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-              <Target className="h-5 w-5 text-blue-500" />
+              <Target className="h-5 w-5 text-[#e6e6e6]" />
               Issue / Feedback Submission Guidelines
             </h2>
 
             <div className="space-y-3">
               <div className="flex items-start gap-3 p-1.5">
-                <MessageSquare className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                <MessageSquare className="h-5 w-5 text-[#e6e6e6] mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-medium mb-1">Be Specific</h3>
-                  <p className="text-gray-400 text-sm">
+                  <h3 className="text-[#e6e6e6] font-medium mb-1">
+                    Be Specific
+                  </h3>
+                  <p className="text-[#e6e6e6] text-sm">
                     Share your detailed thoughts about what you liked or what
                     can be improved in blogs and other projects.
                   </p>
@@ -91,12 +89,12 @@ export default function FeedbackPage(): JSX.Element {
               </div>
 
               <div className="flex items-start gap-3 p-1.5">
-                <Lightbulb className="h-5 w-5 text-yellow-500 mt-0.5 flex-shrink-0" />
+                <Lightbulb className="h-5 w-5 text-[#e6e6e6] mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-medium mb-1">
+                  <h3 className="text-[#e6e6e6] font-medium mb-1">
                     Be Constructive
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-[#e6e6e6] text-sm">
                     Give specific suggestions like UI/UX improvements or content
                     variations. Give suggestions that can help me improve. Be
                     respecfull while giving negative feedback.
@@ -107,10 +105,10 @@ export default function FeedbackPage(): JSX.Element {
               <div className="flex items-start gap-3 p-1.5">
                 <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-white font-medium mb-1">
+                  <h3 className="text-[#e6e6e6] font-medium mb-1">
                     Give feedback in proper format
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-[#e6e6e6] text-sm">
                     Use the form on the right to submit your feedback. Make sure
                     to fill in the required fields.
                   </p>
@@ -128,7 +126,7 @@ export default function FeedbackPage(): JSX.Element {
 
         {/* Right Side - Feedback Form */}
         <div className="flex items-center">
-          <Card className="w-full border-none bg-[#141414] border-gray-800">
+          <Card className="w-full border-none bg-transparent shadow-none  ">
             <CardHeader className="space-y-2">
               <CardTitle className="text-2xl font-bold text-white">
                 Share Your Feedback
@@ -152,7 +150,7 @@ export default function FeedbackPage(): JSX.Element {
                     type="text"
                     placeholder="Your name"
                     disabled={isSubmitting}
-                    className="bg-[#252525] text-white border-gray-800 focus:border-blue-500 transition-colors"
+                    className="bg-[#252525] text-white border-none  rounded-none  transition-colors"
                   />
                 </div>
 
@@ -169,7 +167,7 @@ export default function FeedbackPage(): JSX.Element {
                     type="email"
                     placeholder="your.email@example.com"
                     disabled={isSubmitting}
-                    className="bg-[#252525] text-white border-gray-800 focus:border-blue-500 transition-colors"
+                    className="bg-[#252525] text-white border-none rounded-none  transition-colors"
                   />
                 </div>
 
@@ -186,7 +184,7 @@ export default function FeedbackPage(): JSX.Element {
                     type="text"
                     placeholder="@github_handle / Instagram_handle"
                     disabled={isSubmitting}
-                    className="bg-[#252525] font-mono border-gray-800 text-green-500 focus:border-blue-500 transition-colors"
+                    className="bg-[#252525] font-mono border-none  rounded-none  text-green-500 transition-colors"
                   />
                 </div>
 
@@ -203,7 +201,7 @@ export default function FeedbackPage(): JSX.Element {
                     placeholder="Please share your feedback (minimum 10 characters)"
                     disabled={isSubmitting}
                     rows={5}
-                    className="bg-[#252525] font-mono border-gray-800 text-white resize-none focus:border-blue-500 transition-colors"
+                    className="bg-[#252525] font-mono border-none rounded-none text-white resize-none transition-colors"
                   />
                 </div>
 
@@ -228,10 +226,10 @@ export default function FeedbackPage(): JSX.Element {
                   </Alert>
                 )}
 
-                <Button
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 cursor-pointer text-white font-medium px-4 py-2 rounded-full transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center"
+                  className="w-full bg-green-600 cursor-pointer text-black font-bold px-4 py-4 rounded transition-colors focus:outline-none text-xl focus:ring-2 focus:ring-blue-500 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -241,7 +239,7 @@ export default function FeedbackPage(): JSX.Element {
                   ) : (
                     "Submit Feedback"
                   )}
-                </Button>
+                </button>
               </form>
             </CardContent>
           </Card>
